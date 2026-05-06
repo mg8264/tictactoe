@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class UC2 {
+public class UC3 {
 
     static char[][] board = new char[3][3];
 
@@ -13,6 +13,8 @@ public class UC2 {
         performToss();
         printBoard();
 
+        int slot = getUserSlot();
+        System.out.println("You selected slot: " + slot);
     }
 
     public static void initializeBoard() {
@@ -52,5 +54,14 @@ public class UC2 {
             }
             System.out.println();
         }
+    }
+
+    public static int getUserSlot() {
+        java.util.Scanner sc = new java.util.Scanner(System.in);
+
+        System.out.print("Enter a slot number (1-9): ");
+        int slot = sc.nextInt();
+
+        return slot;
     }
 }
